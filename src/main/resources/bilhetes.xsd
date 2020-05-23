@@ -1,0 +1,74 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.hstcajservice.rjconsultores.com/"
+		targetNamespace="http://ws.hstcajservice.rjconsultores.com/">
+		
+   <xs:element name="buscarBilhetes" type="tns:buscarBilhetes"/>
+   <xs:element name="buscarBilhetesResponse" type="tns:buscarBilhetesResponse"/>
+ 
+   <xs:complexType name="buscarBilhetes">
+      <xs:sequence>
+         <xs:element name="dataInicio" type="xs:string" minOccurs="0"/>
+         <xs:element name="dataFim" type="xs:string" minOccurs="0"/>
+         <xs:element name="codEmpresaGrupo" type="xs:int" minOccurs="0"/>
+         <xs:element name="codConexao" type="xs:int" minOccurs="0"/>
+         <xs:element name="codEmpresa" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+   </xs:complexType>
+   
+   <xs:complexType name="buscarBilhetesResponse">
+      <xs:sequence>
+         <xs:element name="return" type="tns:seguroWS" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+   </xs:complexType>
+   
+   <xs:complexType name="seguroWS">
+      <xs:sequence>
+         <xs:element name="activo" type="xs:int" minOccurs="0"/>
+         <xs:element name="agencia_vendeu" type="xs:string" minOccurs="0"/>
+         <xs:element name="CPF" type="xs:string" minOccurs="0"/>
+         <xs:element name="canal_venda" type="xs:string" minOccurs="0"/>
+         <xs:element name="cidade" type="xs:string" minOccurs="0"/>
+         <xs:element name="codDestino" type="xs:string" minOccurs="0"/>
+         <xs:element name="codLinha" type="xs:string" minOccurs="0"/>
+         <xs:element name="codOrigem" type="xs:string" minOccurs="0"/>
+         <xs:element name="codigoseguradora" type="xs:string" minOccurs="0"/>
+         <xs:element name="dataCancelamento" type="xs:string" minOccurs="0"/>
+         <xs:element name="dataNascimento" type="xs:string" minOccurs="0"/>
+         <xs:element name="data_desembarque" type="xs:string" minOccurs="0"/>
+         <xs:element name="data_embarque" type="xs:string" minOccurs="0"/>
+         <xs:element name="data_venda" type="xs:string" minOccurs="0"/>
+         <xs:element name="descLinha" type="xs:string" minOccurs="0"/>
+         <xs:element name="destino" type="xs:string" minOccurs="0"/>
+         <xs:element name="empresa" type="xs:string" minOccurs="0"/>
+         <xs:element name="estado" type="xs:string" minOccurs="0"/>
+         <xs:element name="forma_pgto" type="xs:string" minOccurs="0"/>
+         <xs:element name="funcionario" type="xs:string" minOccurs="0"/>
+         <xs:element name="hora_desembarque" type="xs:string" minOccurs="0"/>
+         <xs:element name="hora_embarque" type="xs:string" minOccurs="0"/>
+         <xs:element name="hora_venda" type="xs:string" minOccurs="0"/>
+         <xs:element name="km" type="xs:decimal" minOccurs="0"/>
+         <xs:element name="localizador" type="xs:string" minOccurs="0"/>
+         <xs:element name="lote" type="xs:string" minOccurs="0"/>
+         <xs:element name="nomFuncionario" type="xs:string" minOccurs="0"/>
+         <xs:element name="nome" type="xs:string" minOccurs="0"/>
+         <xs:element name="nomeBilheteiro" type="xs:string" minOccurs="0"/>
+         <xs:element name="nome_agencia" type="xs:string" minOccurs="0"/>
+         <xs:element name="numero" type="xs:string" minOccurs="0"/>
+         <xs:element name="numeroSorte" type="xs:string" minOccurs="0"/>
+         <xs:element name="ofertaespontanea" type="xs:string" minOccurs="0"/>
+         <xs:element name="org_concedente" type="xs:string" minOccurs="0"/>
+         <xs:element name="origem" type="xs:string" minOccurs="0"/>
+         <xs:element name="parcelas" type="xs:string" minOccurs="0"/>
+         <xs:element name="poltrona" type="xs:string" minOccurs="0"/>
+         <xs:element name="produto" type="xs:string" minOccurs="0"/>
+         <xs:element name="qtdVendas" type="xs:string" minOccurs="0"/>
+         <xs:element name="qtdreimpressao" type="xs:string" minOccurs="0"/>
+         <xs:element name="RG" type="xs:string" minOccurs="0"/>
+         <xs:element name="serie" type="xs:string" minOccurs="0"/>
+         <xs:element name="status" type="xs:string" minOccurs="0"/>
+         <xs:element name="subserie" type="xs:string" minOccurs="0"/>
+         <xs:element name="telefone" type="xs:string" minOccurs="0"/>
+         <xs:element name="valor" type="xs:decimal" minOccurs="0"/>
+      </xs:sequence>
+   </xs:complexType>
+   
+</xs:schema>
